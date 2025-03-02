@@ -1,0 +1,33 @@
+/*package main 
+
+import(
+	
+)*/
+
+func mergeArrays(nums1 [][]int, nums2 [][]int) [][]int {
+  res:=[][]int{}
+  i,j:=0,0
+  for i < len(nums1) &&  j < len(nums2){
+      id1,val1:=nums1[i][0] , nums1[i][1]
+      id2,val2:=nums2[j][0] , nums2[j][1]
+
+      if id1<id2{
+          res=append(res,nums1[i])
+          i++
+      } else if id2<id1 {
+          res=append(res,nums2[j])
+          j++
+      } else{
+          res=append(res,[]int{id1,val1+val2})
+          i++
+          j++
+      }
+  }
+  if i < len(nums1){
+      res=append(res,nums1[i:]...)
+  }
+   if j < len(nums2){
+      res=append(res,nums2[j:]...)
+  }
+  return res
+}
