@@ -37,7 +37,7 @@ func main() {
 	fmt.Printf("index values %v,%v gives target %v", res[0], res[1], target)
 }
 
-// if mp.find(mp[key])!=mp.find()-cpp
+// if mp.find(mp[key])!=mp.end()-cpp
 
 // if val, exists := mp[key]; exists {
 // 	fmt.Println("Key found with value:", val)
